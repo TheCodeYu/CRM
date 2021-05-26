@@ -12,3 +12,4 @@ GitHub：https://github.com/TheCodeYu/crm.git
 
 - Generator, tests and example.
 - add banner and application.yml
+- add home work
