@@ -1,4 +1,4 @@
-package com.mychip.framework.config;
+package com.mychip.framework.datasource;
 
 
 import org.springframework.beans.factory.annotation.Value;
@@ -8,7 +8,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 /**
  * druid 配置属性
  *
- * @author ruoyi
+ * @author zhouyu
  */
 @Configuration
 public class DruidProperties

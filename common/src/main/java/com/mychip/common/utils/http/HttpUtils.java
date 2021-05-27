@@ -24,7 +24,7 @@ import com.mychip.common.constant.Constant;
 /**
  * 通用http发送方法
  *
- * @author ruoyi
+ * @author zhouyu
  */
 public class HttpUtils
 {

@@ -13,7 +13,7 @@ import com.mychip.common.utils.Threads;
 /**
  * 线程池配置
  *
- * @author ruoyi
+ * @author zhouyu
  **/
 @Configuration
 public class ThreadPoolConfig

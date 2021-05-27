@@ -1,4 +1,4 @@
-package com.ruoyi.framework.config;
+package com.mychip.framework.config;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -22,7 +22,7 @@ import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties;
 import com.alibaba.druid.util.Utils;
 import com.mychip.common.enums.DataSourceType;
-import com.mychip.framework.config.DruidProperties;
+import com.mychip.framework.datasource.DruidProperties;
 import com.mychip.framework.datasource.DynamicDataSource;
 
 /**

@@ -6,7 +6,7 @@ import com.mychip.common.utils.StringUtils;
 /**
  * 转义和反转义工具类
  *
- * @author ruoyi
+ * @author zhouyu
  */
 public class EscapeUtil
 {

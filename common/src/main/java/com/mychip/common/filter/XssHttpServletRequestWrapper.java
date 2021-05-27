@@ -16,7 +16,7 @@ import com.mychip.common.utils.html.EscapeUtil;
 /**
  * XSS过滤处理
  *
- * @author ruoyi
+ * @author zhouyu
  */
 public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper
 {
