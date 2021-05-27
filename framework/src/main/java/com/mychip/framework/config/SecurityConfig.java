@@ -43,6 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * 退出处理类
      */
+    @Autowired
     private LogoutSuccessHandlerImpl logoutSuccessHandler;
 
     /**
@@ -114,8 +115,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // 添加JWT filter
         http.addFilterBefore(authenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
         // 添加CORS filter
-        http.addFilterBefore(corsFilter, JwtAuthenticationTokenFilter.class);
         http.addFilterBefore(corsFilter, LogoutFilter.class);
+        /// [todo]    springboot 2.5 不支持这么写
+        //http.addFilterBefore(corsFilter, JwtAuthenticationTokenFilter.class);
+        http.addFilterAfter(authenticationTokenFilter,CorsFilter.class);
+
+
     }
 
     /**
