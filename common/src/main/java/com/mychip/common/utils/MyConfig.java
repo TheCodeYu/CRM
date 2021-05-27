@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * 
  * @author  zhouyu
  */
-@Component
+@Component()
 @ConfigurationProperties(prefix = "crm")
 public class MyConfig {
     /** 项目名称 */

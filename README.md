@@ -13,3 +13,9 @@ GitHub：https://github.com/TheCodeYu/crm.git
 - Generator, tests and example.
 - add banner and application.yml
 - add home work
+
+## 2021-05-27
+
+- add CrmServletInitializer for External tomcat
+- add SecurityConfig and jwt
+- add DataBase

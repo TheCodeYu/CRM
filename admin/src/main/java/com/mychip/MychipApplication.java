@@ -1,4 +1,4 @@
-package com.mychip.crm;
+package com.mychip;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,10 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author	zhouyu
  */
 @SpringBootApplication
-public class CrmApplication {
+public class MychipApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CrmApplication.class, args);
+		SpringApplication.run(MychipApplication.class, args);
 		System.out.println("(♥◠‿◠)ﾉﾞ  system启动成功   ლ(´ڡ`ლ)ﾞ  \n" +
                 " .-------.       ____     __        \n" +
                 " |  _ _   \\      \\   \\   /  /    \n" +
