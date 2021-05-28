@@ -1,0 +1,51 @@
+
+###
+#API接口测试文件
+###
+@hostname = localhost
+@port = 8080
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+@createdAt = {{$datetime iso8601}}
+
+###Login API
+
+POST http://{{host}}/login 
+Content-Type: application/json
+
+{
+   "username" : "admin",
+   "password" : "admin123",
+   "code" : 5,
+   "uuid" : 212222
+}
+
+
+################################使用实例
+### Send request with dynamic variables in request's body
+POST https://httpbin.org/post
+Content-Type: application/json
+
+{
+  "id": {{$uuid}},
+  "price": {{$randomInt}},
+  "ts": {{$timestamp}},
+  "value": "content"
+}
+
+### GET request with environment variables
+GET {{host}}/get?show_env={{show_env}}
+Accept: application/json
+
+
+
+###
+
+# curl -X POST "http://dummy.restapiexample.com/api/v1/create" -d "Hello World"
+POST http://dummy.restapiexample.com/api/v1/create
+Content-Type: application/x-www-form-urlencoded
+
+Hello World
+
+###
+

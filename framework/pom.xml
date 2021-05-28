@@ -58,20 +58,20 @@
     </dependency>
 
     <!--下面三个适配jdk11兼容性问题-->
-    <dependency>
-      <groupId>javax.xml.bind</groupId>
-      <artifactId>jaxb-api</artifactId>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/javax.activation/activation -->
-    <dependency>
-      <groupId>javax.activation</groupId>
-      <artifactId>activation</artifactId>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime -->
-    <dependency>
-      <groupId>org.glassfish.jaxb</groupId>
-      <artifactId>jaxb-runtime</artifactId>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>javax.xml.bind</groupId>-->
+<!--      <artifactId>jaxb-api</artifactId>-->
+<!--    </dependency>-->
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/javax.activation/activation &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>javax.activation</groupId>-->
+<!--      <artifactId>activation</artifactId>-->
+<!--    </dependency>-->
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.glassfish.jaxb</groupId>-->
+<!--      <artifactId>jaxb-runtime</artifactId>-->
+<!--    </dependency>-->
   </dependencies>
 
 </project>
