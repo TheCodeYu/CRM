@@ -1,7 +1,7 @@
 package com.mychip.framework.server;
 
 import com.alibaba.fastjson.JSONObject;
-import com.mychip.common.constant.Product;
+import com.mychip.common.enums.Product;
 import com.mychip.common.core.domain.LoginUser;
 import com.mychip.common.core.domain.entity.SysUser;
 import com.mychip.common.enums.UserStatus;

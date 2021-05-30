@@ -1,4 +1,4 @@
-package com.mychip.common.constant;
+package com.mychip.common.enums;
 
 /**
  * Description:

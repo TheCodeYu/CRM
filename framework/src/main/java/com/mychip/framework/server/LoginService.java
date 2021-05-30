@@ -1,7 +1,7 @@
 package com.mychip.framework.server;
 
 import com.mychip.common.constant.Constant;
-import com.mychip.common.constant.Product;
+import com.mychip.common.enums.Product;
 import com.mychip.common.core.domain.LoginUser;
 import com.mychip.common.core.domain.entity.SysUser;
 import com.mychip.common.core.redis.RedisCache;
@@ -69,7 +69,7 @@ public class LoginService {
 //            throw new CaptchaException();
 //        }
         // 用户验证
-        Authentication authentication = null;
+        Authentication authentication;
         try
         {
             if(product.startsWith(Constant.PACKAGE) && (product.length() > Constant.PACKAGE.length())){
