@@ -1,6 +1,7 @@
 package com.mychip.framework.server;
 
 import com.mychip.common.constant.Constant;
+import com.mychip.common.constant.Product;
 import com.mychip.common.core.domain.LoginUser;
 import com.mychip.common.core.domain.entity.SysUser;
 import com.mychip.common.core.redis.RedisCache;
@@ -51,8 +52,9 @@ public class LoginService {
      * @param uuid 唯一标识
      * @return 结果
      */
-    public String login(String username, String password, String code, String uuid)
+    public String login(String username, String password, String code, String uuid,String product)
     {
+
 //        String verifyKey = Constant.CAPTCHA_CODE_KEY + uuid;
 //        String captcha = redisCache.getCacheObject(verifyKey);
 //        redisCache.deleteObject(verifyKey);
@@ -70,9 +72,16 @@ public class LoginService {
         Authentication authentication = null;
         try
         {
+            if(product.startsWith(Constant.PACKAGE) && (product.length() > Constant.PACKAGE.length())){
+                product = Product.valueOf(product.substring(Constant.PACKAGE.length())).getCode();
+            }else{
+                throw new CustomException("非法访问");
+            }
             // 该方法会去调用UserDetailsServiceImpl.loadUserByUsername
-            authentication = authenticationManager
-                    .authenticate(new UsernamePasswordAuthenticationToken(username, password));
+            String data = "{\"username\":\""+username+"\",\"product\":\""+product+"\"}";
+            authentication =authenticationManager.authenticate( new UsernamePasswordAuthenticationToken(data,
+                    password));
+
         }
         catch (Exception e)
         {

@@ -10,12 +10,14 @@
 
 ###Login API
 
-POST http://{{host}}/login 
+POST http://{{host}}/login HTTP/3.0
 Content-Type: application/json
+Accept-Language: en_US
 
 {
-   "username" : "admin",
+   "username" : "210530000",
    "password" : "admin123",
+   "product" :"com.mychip.crm",
    "code" : 5,
    "uuid" : 212222
 }

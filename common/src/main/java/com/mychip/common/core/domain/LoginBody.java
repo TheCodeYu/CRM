@@ -28,19 +28,20 @@ public class LoginBody
      */
     private String uuid = "";
 
-    public int getProduct() {
-        return product;
-    }
-
-    public void setProduct(int product) {
-        this.product = product;
-    }
-
     /**
      *
      * 产品类型标志：0：系统软件 1-n：用户软件
      */
-    private int product;
+    private String  product;
+
+
+    public String getProduct() {
+        return product;
+    }
+
+    public void setProduct(String product) {
+        this.product = product;
+    }
 
     public String getUsername()
     {

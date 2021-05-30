@@ -1,10 +1,13 @@
 package com.mychip.framework.server;
 
+import com.alibaba.fastjson.JSONObject;
+import com.mychip.common.constant.Product;
 import com.mychip.common.core.domain.LoginUser;
 import com.mychip.common.core.domain.entity.SysUser;
 import com.mychip.common.enums.UserStatus;
 import com.mychip.common.exception.BaseException;
 import com.mychip.common.utils.StringUtils;
+import com.mychip.system.service.OtherUserService;
 import com.mychip.system.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,9 +30,18 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private OtherUserService otherUserService;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        SysUser user = userService.selectUserByUserName(username);
+        JSONObject jsonObject = JSONObject.parseObject(username);
+        SysUser user;
+        if(Product.crm.getCode().equals(jsonObject.get("product").toString())) {
+            user = userService.selectUserByUserName(jsonObject.get("username").toString());
+        }else{
+            user = otherUserService.selectUserByUserName(jsonObject.get("username").toString(),jsonObject.get("product").toString());
+        }
         if (StringUtils.isNull(user))
         {
             log.info("登录用户：{} 不存在.", username);

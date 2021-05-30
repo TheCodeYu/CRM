@@ -27,10 +27,9 @@ public class LoginController {
     @PostMapping("/login")
     public AjaxResult login(@RequestBody LoginBody loginBody){
         AjaxResult ajaxResult = AjaxResult.success();
-
         //生成令牌并返回
         String token = loginService.login(loginBody.getUsername(), loginBody.getPassword(), loginBody.getCode(),
-                loginBody.getUuid());
+                loginBody.getUuid(),loginBody.getProduct());
         ajaxResult.put(Constant.TOKEN, token);
         return ajaxResult;
     }
